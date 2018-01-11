@@ -108,7 +108,9 @@ fis.match( '*.es6', {
     rExt: '.js',
     parser: [
         // STATIC_PATH_REPLACE,
-        fis.plugin( 'es6' )
+        fis.plugin( 'babel-5.x', {
+            blacklist: ['useStrict']
+        } )
     ]
 } );
 
